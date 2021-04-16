@@ -46,27 +46,26 @@ transformations_name = ["sqrt", "freq", "tanh", "log", "sigmoid", "square", "nor
 
 # TODO ======= settings for generate figure =======
 R = np.load("datasets/compressed/751-803trans7sam2500CV10/freq-751-803trans7sam2500CV10.npy")   # 选择你要生成图的训练集
-shading = True      # feature 线处是否有阴影
-feature_colour = 'r'
-feature_linewidth = 2
-colour = 'k'
-linewid = 0.25
-dpinum = 6
+shading = True      # 变换后的feature 线处是否有阴影
+feature_colour = 'r'        #变换后的feature 线的颜色
+feature_linewidth = 2       #变换后的feature 线宽
+colour = 'k'                #其他feature 线的颜色
+linewid = 0.25              #其他feature 线宽
+dpinum = 6                  #生成图片精度
 # dpi == 6 对应的是 38*28
 # dpi == 200 对应的是1280*960
-if_not_numerical = 'N'
+if_not_numerical = 'N'      #是否需要非数字化特征，‘N’代表不要，‘Y’代表要
 path = os.getcwd()
-file = path + "\\figure1"
+file = path + "\\figure1"   #选择图片保存的文件夹，每次实验可以新建一个文件夹以防混乱
 
 # TODO ======= settings for CNN Trainer =======
-seed = 67
-lr_set = 5e-5
-batch_size_set = 8
-num_epochs_set = 500
-target_path_set = "target/"
-path_set = "figure1/"
-save_name_best_set = 'model_state/'+'batch_size'+str(batch_size_set) +'ckpt_best.pt'
-save_name_end_set = 'model_state/ckpt_routine_'+str(num_epochs_set)+'.pt'
+lr_set = 5e-5                   #学习率
+batch_size_set = 8              #batch size
+num_epochs_set = 500            #训练多少个epoch
+target_path_set = "target/"     #把训练集的npy文件放在这个文件夹下
+path_set = "figure1/"           #把要训练的图片放在这个文件夹下
+save_name_best_set = 'model_state/'+'batch_size'+str(batch_size_set) +'ckpt_best.pt'        #设置当前存有最好成绩的模型名字
+save_name_end_set = 'model_state/ckpt_routine_'+str(num_epochs_set)+'.pt'                   #设置最终训练结果模型的名字
 
 
 
