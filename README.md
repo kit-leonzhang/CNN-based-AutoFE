@@ -33,13 +33,21 @@ code for CNN-based-AutoFE
 openml
 
 python配置：
+
 python 3.7.3
+
 pandas 1.1.5
+
 numpy  1.19.4
+
 matplotlib  3.0.3
+
 sklearn   0.24.0
+
 torch   1.7.0+cu101
+
 seaborn   0.11.1
+
 pillow   5.4.1
 
 '''
