@@ -23,24 +23,6 @@ import os
 import tqdm
 import pandas as pd
 
-"""
-print(os.listdir("../input/cassava-leaf-disease-classification"))
-train_df = pd.read_csv("../input/cassava-leaf-disease-classification/train.csv")
-#print(train_df)
-img_names = train_df['image_id']
-label = train_df['label']
-print(label)
-label = np.array(label)
-print(label)
-print(img_names[:2])
-dicts= {}
-for l in label:
-    if l in dicts:
-        dicts[l] += 1
-    else:
-        dicts[l] =1
-print(dicts)
-"""
 
 #import timm
 # for GPU only
